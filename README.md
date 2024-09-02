@@ -24,7 +24,7 @@
 - **Library & Framwork:** ReactJS, NodeJS, ExpressJS, Clerk, Tanstack
 - **Database:** NoSQL, MongoDB
 - **Generative AI:** Google Generative AI (Google Gemini 1.5 Flash)
-- **Tools**
+- **Tools** VSCode, Git and Github
 
 ## <a name="features">🔋 Features</a>
 
