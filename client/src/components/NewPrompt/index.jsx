@@ -17,11 +17,22 @@ const NewPrompt = ({ data }) => {
     aiData: {}
   })
 
+  const saveHistory = data?.history?.map(({ role, parts }) => ({
+    role,
+    parts: [{ text: parts[0]?.text }],
+  })) || [];
+
+  // Check if the first role is 'user'
+  if (saveHistory.length && saveHistory[0].role !== 'user') {
+    console.error('First history item should have role "user"');
+  }
+
   const chat = model.startChat({
-    history: [
-    ],
-    generationConfig: {
-    },
+    history: saveHistory.length > 0 ? saveHistory : [{
+      role: 'user',
+      parts: [{ text: 'Initial prompt' }] // Default or initial user input
+    }],
+    generationConfig: {},
   });
 
   const endRef = useRef(null);
@@ -133,10 +144,10 @@ const NewPrompt = ({ data }) => {
         </div>
       )}
       <div className='endChat' ref={endRef} ></div>
-      <form className='newForm' onSubmit={handleSubmit}>
+      <form className="newForm" onSubmit={handleSubmit} ref={formRef}>
         <Upload setImg={setImg} />
-        <input id='file' type="file" multiple={false} hidden />
-        <input type="text" name="text" placeholder='Ask anything...' />
+        <input id="file" type="file" multiple={false} hidden />
+        <input type="text" name="text" placeholder="Ask anything..." />
         <button>
           <img src="/arrow.png" alt="" />
         </button>

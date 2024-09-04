@@ -48,22 +48,38 @@ const Dashboard = () => {
   return (
     <div className='dashboardPage'>
       <div className="texts">
-        <div className="logo">
+        {/* <div className="logo">
           <img src="/logo.png" alt="" />
           <h1>AI</h1>
+        </div> */}
+        <div className="options">
+          <div className="option">
+            <p>สวัสดีครับ ผมชื่อ <span className='text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-violet-500 px-1'>ใจฟู</span> <br />
+              ใจฟูเป็นเพื่อน AI ที่พร้อมรับฟังและให้กำลังใจเสมอ ไม่ว่าจะทุกข์หรือสุข ใจฟูอยู่ตรงนี้เพื่อเธอเสมอนะ 😊 <br />
+              อย่างไรก็ตาม ใจฟูเป็นเพียง AI ที่ยังเรียนรู้และพัฒนาอยู่ อาจมีข้อจำกัดในการให้คำแนะนำที่ซับซ้อนหรือละเอียดอ่อน <br />
+              หากต้องการคำปรึกษาเชิงลึก ใจฟูแนะนำให้ปรึกษาผู้เชี่ยวชาญเฉพาะด้านนะ
+              ไม่ว่าจะเรื่องอะไร ใจฟูพร้อมรับฟังและอยู่เคียงข้างเสมอ 💕
+            </p>
+            <p>
+              Hello there, my name is <span className='text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-violet-500 px-1'>Jaifoo</span> <br />
+              Jaifoo is an AI companion always ready to listen and offer encouragement, no matter what you're going through. I'm here for you.
+              However, as an AI still under development, I may have limitations in providing complex or sensitive advice.
+              If you need in-depth consultation, I recommend seeking advice from a specialist. Regardless of what you're going through, Jaifoo is always ready to listen and be by your side. 💕
+            </p>
+          </div>
         </div>
         <div className="options">
           <div className="option">
-            <img src="/chat.png" alt="" />
-            <span>Create a New Chat</span>
+            <img src="/bot.png" alt="" />
+            <span>How to lose weight (วิธีการลดน้ำหนัก)</span>
           </div>
           <div className="option">
-            <img src="/image.png" alt="" />
-            <span>Analyze Images</span>
+            <img src="/bot.png" alt="" />
+            <span>How to make pancakes (วิธีการทำแพนเค้ก)</span>
           </div>
           <div className="option">
-            <img src="/code.png" alt="" />
-            <span>Help me with my Code</span>
+            <img src="/bot.png" alt="" />
+            <span>How to make money (วิธีการหาเงิน)</span>
           </div>
         </div>
       </div>
